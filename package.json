@@ -1,0 +1,26 @@
+{
+  "name": "invoke-deep",
+  "version": "1.0.0",
+  "description": "Recursively walks through an object and calls any function passing the object as parameter.",
+  "license": "MIT",
+  "main": "index.js",
+  "author": {
+    "name": "Matt Stypa",
+    "email": "matt@mattstypa.com",
+    "url": "http://mattstypa.com"
+  },
+  "keywords": [
+    "invoke",
+    "deep"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattStypa/invoke-deep"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0"
+  }
+}
