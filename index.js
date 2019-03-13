@@ -1,10 +1,12 @@
+const isObject = require('lodash.isplainobject');
+
 function invokeDeep(root) {
   function recurse(obj) {
-    if (isFunction(obj)) {
+    if (typeof obj === 'function') {
       return obj(root);
     }
 
-    if (isArray(obj)) {
+    if (Array.isArray(obj)) {
       return obj.map(recurse);
     }
 
@@ -18,18 +20,6 @@ function invokeDeep(root) {
   }
 
   return recurse(root);
-}
-
-function isArray(obj) {
-  return Array.isArray(obj);
-}
-
-function isObject(obj) {
-  return Object.prototype.toString.call(obj) === '[object Object]';
-}
-
-function isFunction(obj) {
-  return typeof obj === 'function';
 }
 
 module.exports = invokeDeep;
